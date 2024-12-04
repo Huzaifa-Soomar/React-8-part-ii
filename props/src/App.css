@@ -1,0 +1,136 @@
+/* General Dashboard Styles */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #1e1e2f, #121223);
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #66ff99; /* Bright green */
+  text-shadow: 0 0 10px rgba(102, 255, 153, 0.8);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(to bottom right, #29293d, #3a3a5b);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Specific Card Styles */
+.card.user-info {
+  background: linear-gradient(45deg, #4caf50, #388e3c); /* Green gradient */
+  color: #ffffff;
+}
+
+.card.stats {
+  background: linear-gradient(45deg, #2196f3, #1565c0); /* Blue gradient */
+  color: #ffffff;
+}
+
+.card.message {
+  background: linear-gradient(45deg, #ff9800, #e65100); /* Orange gradient */
+  color: #ffffff;
+}
+
+.card.graph {
+  background: linear-gradient(45deg, #9c27b0, #6a1b9a); /* Purple gradient */
+  color: #ffffff;
+}
+
+/* Typography */
+.card h3 {
+  font-size: 20px;
+  color: #66ff99;
+  text-shadow: 0 0 10px rgba(102, 255, 153, 0.8);
+}
+
+.card p {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+/* Glow Effect */
+.card h3,
+.card p {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile Picture */
+.udo-container {
+  text-align: center; /* Center-align the content */
+}
+
+.pic {
+  width: 80px; /* Set the width of the image */
+  height: 80px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 10px; /* Add some space below the image */
+  border: 2px solid #66ff99; /* Add a bright green border */
+  box-shadow: 0 4px 12px rgba(0, 255, 102, 0.3); /* Add a glowing shadow */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+  background: linear-gradient(to bottom right, #434361, #5a5a87);
+  color: #66ff99;
+}
+
+/* Button-Like Look for Stats */
+.card.stats p {
+  background-color: rgba(33, 150, 243, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.card.stats p:hover {
+  background-color: rgba(33, 150, 243, 0.4);
+}
+
+/* Message Text Styling */
+.card.message p {
+  font-size: 18px;
+  font-style: italic;
+  color: #ffd54f; /* Yellow accent color */
+  text-shadow: 0 0 8px rgba(255, 223, 47, 0.8);
+}
